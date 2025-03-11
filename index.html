@@ -26,10 +26,6 @@
         .container {
             width: 80%;
             margin: 20px auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s ease, transform 0.5s ease;
@@ -68,12 +64,26 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
             position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            max-height: 50px;
+            padding: 10px;
         }
-        .recap:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        .recap h3 {
+            margin: 0;
+        }
+        .recap p {
+            margin-top: 10px;
+            display: none;
+        }
+        .recap.open {
+            max-height: 200px;
+            padding: 15px;
+        }
+        .recap.open p {
+            display: block;
         }
     </style>
     <script>
@@ -88,6 +98,9 @@
                 activeSection.style.transform = 'translateY(0)';
             }, 10);
         }
+        function toggleRecap(element) {
+            element.classList.toggle('open');
+        }
     </script>
 </head>
 <body>
@@ -100,15 +113,15 @@
     <div id="avancement" class="container">
         <h2>Avancement du TIPE</h2>
         <div class="recap-container">
-            <div class="recap">
+            <div class="recap" onclick="toggleRecap(this)">
                 <h3>Semaine du 10 mars</h3>
                 <p>Ici, je décrirai les avancées de la semaine du 10 mars.</p>
             </div>
-            <div class="recap">
+            <div class="recap" onclick="toggleRecap(this)">
                 <h3>Semaine du 17 mars</h3>
                 <p>Ici, je décrirai les avancées de la semaine du 17 mars.</p>
             </div>
-            <div class="recap">
+            <div class="recap" onclick="toggleRecap(this)">
                 <h3>Semaine du 24 mars</h3>
                 <p>Ici, je décrirai les avancées de la semaine du 24 mars.</p>
             </div>
