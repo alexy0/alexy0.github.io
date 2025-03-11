@@ -3,100 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIPE - Suivi des recherches</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>TIPE : Paya Alexy</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
-            color: white;
-            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
         }
         header {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        h1 {
-            font-size: 3rem;
-            margin: 20px 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
+            background-color: #333;
             color: white;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        .content {
-            padding: 50px;
-        }
-        #avancement {
-            display: none;
-            background: rgba(255, 255, 255, 0.2);
+            text-align: center;
             padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
+            font-size: 24px;
         }
-        button {
-            background: #ff9800;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
-            margin-top: 20px;
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
-        button:hover {
-            background: #e68900;
+        section {
+            margin-bottom: 20px;
+        }
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
         }
     </style>
-    <script>
-        function toggleAvancement() {
-            var avancement = document.getElementById("avancement");
-            if (avancement.style.display === "none") {
-                avancement.style.display = "block";
-            } else {
-                avancement.style.display = "none";
-            }
-        }
-    </script>
 </head>
 <body>
-    <header>
-        <h1>Mon TIPE - Suivi des recherches</h1>
-        <button onclick="toggleAvancement()">Afficher l'Avancement</button>
-    </header>
-    
-    <div class="content">
-        <section id="accueil">
-            <h2>Bienvenue</h2>
-            <p>Ce site présente l'avancement de mon TIPE, mes recherches et mes idées.</p>
+    <header>TIPE : Paya Alexy</header>
+    <div class="container">
+        <section id="avancement">
+            <h2>Avancement du TIPE</h2>
+            <p>Ici, je décrirai chaque semaine l'avancement de mon TIPE.</p>
+        </section>
+        <section id="sources">
+            <h2>Sources</h2>
+            <p>Liste des sources utilisées dans mon travail.</p>
+        </section>
+        <section id="diaporama">
+            <h2>Présentation</h2>
+            <p>Aperçu de mon diaporama.</p>
         </section>
     </div>
-    
-    <div class="content" id="avancement">
-        <h2>Avancement</h2>
-        <p>Suivi des recherches et développements.</p>
-        <ul>
-            <li>Phase 1 : Idéation et recherches préliminaires</li>
-            <li>Phase 2 : Expérimentations et modélisations</li>
-            <li>Phase 3 : Analyse et rédaction du rapport</li>
-        </ul>
-    </div>
-    
-    <footer>
-        <p>&copy; 2025 - Mon TIPE</p>
-    </footer>
 </body>
 </html>
