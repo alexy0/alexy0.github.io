@@ -9,11 +9,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
             color: #333;
         }
         header {
-            background-color: #333;
+            background-color: #444;
             color: white;
             text-align: center;
             padding: 20px;
@@ -26,31 +26,56 @@
             padding: 20px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            display: none;
         }
-        section {
-            margin-bottom: 20px;
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #444;
+            background: #d3e0ea;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background: #a4c5e8;
         }
         h2 {
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #444;
             padding-bottom: 5px;
         }
     </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.container').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <header>TIPE : Paya Alexy</header>
-    <div class="container">
-        <section id="avancement">
-            <h2>Avancement du TIPE</h2>
-            <p>Ici, je décrirai chaque semaine l'avancement de mon TIPE.</p>
-        </section>
-        <section id="sources">
-            <h2>Sources</h2>
-            <p>Liste des sources utilisées dans mon travail.</p>
-        </section>
-        <section id="diaporama">
-            <h2>Présentation</h2>
-            <p>Aperçu de mon diaporama.</p>
-        </section>
+    <nav>
+        <a href="#" onclick="showSection('avancement')">Avancement</a>
+        <a href="#" onclick="showSection('sources')">Sources</a>
+        <a href="#" onclick="showSection('diaporama')">Présentation</a>
+    </nav>
+    <div id="avancement" class="container">
+        <h2>Avancement du TIPE</h2>
+        <p>Ici, je décrirai chaque semaine l'avancement de mon TIPE.</p>
+    </div>
+    <div id="sources" class="container">
+        <h2>Sources</h2>
+        <p>Liste des sources utilisées dans mon travail.</p>
+    </div>
+    <div id="diaporama" class="container">
+        <h2>Présentation</h2>
+        <p>Aperçu de mon diaporama.</p>
     </div>
 </body>
 </html>
