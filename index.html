@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,28 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIPE : Paya Alexy</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            background: linear-gradient(to right, #4facfe, #00f2fe);
             color: #333;
+            transition: background 0.5s ease-in-out;
         }
         header {
-            background-color: #444;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
             color: white;
             text-align: center;
-            padding: 20px;
-            font-size: 24px;
+            padding: 40px 20px;
+            font-size: 28px;
+            font-weight: 600;
         }
         .container {
             width: 80%;
             margin: 20px auto;
             background: white;
             padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
             display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
         nav {
             text-align: center;
@@ -34,15 +42,18 @@
         }
         nav a {
             text-decoration: none;
-            color: #444;
-            background: #d3e0ea;
-            padding: 10px 20px;
+            color: white;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 12px 25px;
             margin: 5px;
-            border-radius: 5px;
+            border-radius: 25px;
             display: inline-block;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.2s ease;
         }
         nav a:hover {
-            background: #a4c5e8;
+            background: rgba(255, 255, 255, 0.5);
+            transform: scale(1.1);
         }
         h2 {
             border-bottom: 2px solid #444;
@@ -53,8 +64,15 @@
         function showSection(sectionId) {
             document.querySelectorAll('.container').forEach(section => {
                 section.style.display = 'none';
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
             });
-            document.getElementById(sectionId).style.display = 'block';
+            const activeSection = document.getElementById(sectionId);
+            activeSection.style.display = 'block';
+            setTimeout(() => {
+                activeSection.style.opacity = '1';
+                activeSection.style.transform = 'translateY(0)';
+            }, 10);
         }
     </script>
 </head>
