@@ -58,18 +58,23 @@
             border-bottom: 2px solid #444;
             padding-bottom: 5px;
         }
-        .tabs {
+        .tabs-container {
+            overflow-x: auto;
+            white-space: nowrap;
             display: flex;
-            margin-top: 10px;
+            flex-direction: row-reverse;
+            scrollbar-width: thin;
+            scrollbar-color: #a4c5e8 #d3e0ea;
         }
         .tab {
             padding: 10px 15px;
             background: #d3e0ea;
-            margin-right: 5px;
+            margin-left: 5px;
             cursor: pointer;
             border-radius: 5px 5px 0 0;
             font-weight: 600;
             transition: background 0.3s;
+            display: inline-block;
         }
         .tab:hover, .tab.active {
             background: #a4c5e8;
@@ -120,7 +125,7 @@
     </nav>
     <div id="avancement" class="container">
         <h2>Avancement du TIPE</h2>
-        <div class="tabs">
+        <div class="tabs-container">
             <div class="tab active" data-tab="sem-10-mars" onclick="showTab('sem-10-mars')">Semaine du 10 mars</div>
             <div class="tab" data-tab="sem-17-mars" onclick="showTab('sem-17-mars')">Semaine du 17 mars</div>
             <div class="tab" data-tab="sem-24-mars" onclick="showTab('sem-24-mars')">Semaine du 24 mars</div>
