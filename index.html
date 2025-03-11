@@ -27,7 +27,7 @@
             width: 80%;
             margin: 20px auto;
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(0);
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
         nav {
@@ -90,12 +90,13 @@
         function showSection(sectionId) {
             document.querySelectorAll('.container').forEach(section => {
                 section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
+                section.style.transform = 'translateY(0)';
             });
             const activeSection = document.getElementById(sectionId);
             setTimeout(() => {
                 activeSection.style.opacity = '1';
                 activeSection.style.transform = 'translateY(0)';
+                window.scrollTo(0, 0);
             }, 10);
         }
         function toggleRecap(element) {
@@ -113,18 +114,12 @@
     <div id="avancement" class="container">
         <h2>Avancement du TIPE</h2>
         <div class="recap-container">
-            <div class="recap" onclick="toggleRecap(this)">
-                <h3>Semaine du 10 mars</h3>
-                <p>Ici, je décrirai les avancées de la semaine du 10 mars.</p>
-            </div>
-            <div class="recap" onclick="toggleRecap(this)">
-                <h3>Semaine du 17 mars</h3>
-                <p>Ici, je décrirai les avancées de la semaine du 17 mars.</p>
-            </div>
-            <div class="recap" onclick="toggleRecap(this)">
-                <h3>Semaine du 24 mars</h3>
-                <p>Ici, je décrirai les avancées de la semaine du 24 mars.</p>
-            </div>
+            <div class="recap" onclick="toggleRecap(this)"><h3>Semaine du 10 mars</h3><p>Avancement de cette semaine.</p></div>
+            <div class="recap" onclick="toggleRecap(this)"><h3>Semaine du 3 mars</h3><p>Avancement de cette semaine.</p></div>
+            <div class="recap" onclick="toggleRecap(this)"><h3>Semaine du 25 février</h3><p>Avancement de cette semaine.</p></div>
+            <div class="recap" onclick="toggleRecap(this)"><h3>Semaine du 18 février</h3><p>Avancement de cette semaine.</p></div>
+            <div class="recap" onclick="toggleRecap(this)"><h3>Semaine du 11 février</h3><p>Avancement de cette semaine.</p></div>
+            <div class="recap" onclick="toggleRecap(this)"><h3>Semaine du 4 février</h3><p>Avancement de cette semaine.</p></div>
         </div>
     </div>
     <div id="sources" class="container">
