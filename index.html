@@ -16,7 +16,7 @@
             transition: background 0.5s ease-in-out;
         }
         header {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7));
+            background: linear-gradient(to right, #4facfe, #00f2fe);
             color: white;
             text-align: center;
             padding: 40px 20px;
@@ -27,6 +27,7 @@
             width: 80%;
             margin: 20px auto;
             opacity: 0;
+            position: relative;
             transform: translateY(0);
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
@@ -67,7 +68,7 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, max-height 1s ease-in-out, padding 0.3s ease-in-out;
             position: relative;
             cursor: pointer;
             overflow: hidden;
@@ -82,7 +83,7 @@
             display: none;
         }
         .recap.open {
-            max-height: 200px;
+            max-height: 1000px;
             padding: 15px;
         }
         .recap.open p {
@@ -117,19 +118,38 @@
     <div id="avancement" class="container">
         <h2>Avancement du TIPE</h2>
         <div class="recap-container">
-            <div class="recap" onclick="toggleRecap(this)"><h3>Recapitulatif</h3><p>Apres la recherche de differents 
-                theme (plus ou moins en rapport avec le theme) j'avais decide de m'arreter sur celui des ordinateurs quantique.
-                Mais malgre le fait que j'avais trouve des articles pouvant servir de base pour mon TIPE
+            <div class="recap" onclick="toggleRecap(this)"><h3>Actuellement</h3><p>
+                Recherche de problematique/idees sur : <br>
+                -Analyse/Modelisation d'algorithmes quantiques <br>
+                -Deep learning/Machine learning en rapport avec l'IA
             </p></div>
+
+            <div class="recap" onclick="toggleRecap(this)"><h3>Recapitulatif</h3><p> 
+                Apres la recherche de differents 
+                theme (plus ou moins en rapport avec le theme cycles et boucles) j'avais decide de m'arreter sur celui des 
+                ordinateurs quantique. Mais malgre le fait que j'avais trouve des articles pouvant servir de base pour mon TIPE 
+                plutot interessants, le theme reste trop large et se concentre trop sur les aspects physiques du fonctionnement que sur 
+                celui informatique.
+                <br>
+                <br>
+
+                La suite de mes recherches m'a mene a un rapport de jury valorisant un sujet sur le theme de "l'analyse d'algorithmes 
+                quantiques" sur lequel j'ai effectue de nombreuses recherches. Celui-ci est interessant surtout apres avoir trouve 
+                des languages de programmation permettant en theorie de modeliser le fonctionnement d'un de ces algorithmes. Mais 
+                les sources sont tres limites et n'expliquent que tres peu le fonctionnement(et difficulte ++).
+            </p></div>
+
+            
+
         </div>
     </div>
     <div id="sources" class="container">
         <h2>Sources</h2>
-        <p>Liste des sources utilisées dans mon travail.</p>
+        <p>En travaux</p>
     </div>
     <div id="diaporama" class="container">
         <h2>Présentation</h2>
-        <p>Aperçu de mon diaporama.</p>
+        <p>En travaux</p>
     </div>
 </body>
 </html>
